@@ -1,0 +1,3 @@
+/home/xsl/桌面/second/build/CMakeFiles/myarray.dir
+/home/xsl/桌面/second/build/CMakeFiles/edit_cache.dir
+/home/xsl/桌面/second/build/CMakeFiles/rebuild_cache.dir
