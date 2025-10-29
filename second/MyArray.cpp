@@ -1,23 +1,23 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <iomanip>
-#include <limits>
+#include <iostream>         // 导入输入输出流库
+#include <algorithm>        //导入算法库
+#include <vector>           // 导入向量容器库
+#include <iomanip>      //导入输入输出流的格式化库
+#include <limits>       //导入数据类型库
 
 using namespace std;
 
 int main() {
-    vector<int> myinput(9);
+    vector<int> myinput(9);     //创建一个长度为9的容器，用来存储input
 
     cout << "请输入9个100以内的整数：" << endl;
     for (int i=0; i<9; i+=1) {
         while (true) {
             cout << "请输入第 " << i + 1 << " 个整数: ";
-            cin >> myinput[i];
+            cin >> myinput[i];      //将input赋值给容器myinput
             
-            if (cin.fail() or myinput[i]<0 or myinput[i]>100) {
-                cin.clear(); 
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            if (cin.fail() or myinput[i]<0 or myinput[i]>100) {     //判断input是否符合要求
+                cin.clear();        //清除状态
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');        //清理缓冲区
                 cout << "输入无效，请输入0-100之间的整数！" << endl;
             } 
             else {
@@ -26,17 +26,16 @@ int main() {
         }
     }
     
-    vector<int> ascending = myinput;
-    sort(ascending.begin(), ascending.end());
+    vector<int> order = myinput;
+    sort(order.begin(), order.end());       //排序算法，默认升序
     cout << "升序排列: ";
-    for (int num : ascending) {
+    for (int num : order) {
         cout << num << " ";
     }
     
-    vector<int> descending = myinput;
-    sort(descending.begin(), descending.end(), greater<int>());
+    reverse(order.begin(), order.end());        //反转顺序
     cout << "\n降序排列: ";
-    for (int num : descending) {
+    for (int num : order) {
         cout << num << " ";
     }
     cout << endl;
@@ -62,7 +61,6 @@ int main() {
         cout << "   | 行和: " << rowSums[i] << endl;
     }
     
-    // 打印列和
     cout << string(16, '-') << endl;
     for (int j=0; j<3; j+=1) {
         cout << setw(4) << colSums[j];
