@@ -26,7 +26,9 @@ int main()
     cout<<endl;
     cout << "这个数组从小到大排列为："<<endl;
     for (I = 0; I <= 8; I++)
-        cout <<"  "<< a[I] ;                         //从小到大输出
+        cout << a[I] << "  ";                         //从小到大输出
+    
+    cout<<endl;
     cout << "这个数组从大到小排列为："<<endl;
     for (I = 8; I >= 0; I--)
         cout << a[I] << "  ";                         //从大到小输出
@@ -34,6 +36,7 @@ int main()
 
     /*以下是求二维数组矩阵与其每行每列的总值*/
 
+    cout<<endl;
     cout<<endl;
     cout << "你输出的二维数组矩阵为（包括每行每列的总值）："<<endl;
     for (i = 0; i <= 2; i++)                                          //分行
