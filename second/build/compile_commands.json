@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/xsl/桌面/second/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/myarray.dir/MyArray.cpp.o -c /home/xsl/桌面/second/MyArray.cpp",
-  "file": "/home/xsl/桌面/second/MyArray.cpp",
-  "output": "CMakeFiles/myarray.dir/MyArray.cpp.o"
-}
-]
